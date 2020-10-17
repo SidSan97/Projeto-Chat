@@ -63,13 +63,17 @@
                        msg_err_exit("connect() failed\n");
                    }
 
+                   char nome[30];
+                   printf("\nInforme seu nome de usuario: ");
+                   gets(nome);
+
                    printf("digite as mensagens\n");
                    do
                    {
                        // limpa o buffer
                        memset(&message, 0, BUFFER_SIZE);
 
-                       printf("msg: ");
+                       printf("%s: ", nome);
                        gets(message);
                        fflush(stdin);
 
